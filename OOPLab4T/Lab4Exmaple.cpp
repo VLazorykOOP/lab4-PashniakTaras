@@ -25,13 +25,13 @@ int mainExample1() {
 	c.real(4.1);
 #endif	
 	ComplexDouble r(2.7, 2.1);
-	ComplexVector A(3,r), B(3,a), C(3,b), D(3), F(1);
-	D[0] = a; 
-	D[1] = b; 
+	ComplexVector A(3, r), B(3, a), C(3, b), D(3), F(1);
+	D[0] = a;
+	D[1] = b;
 	D[2] = ComplexDouble(3.1, 1);
 	F[0] = (1, 3);
 	F[1] = 3.2;
-	cout <<" Begin data "  << endl;
+	cout << " Begin data " << endl;
 	cout << " a= " << a << " b= " << b << " c " << c << endl;
 	cout << " A  \n" << A;
 	cout << " B  \n" << B;
@@ -40,7 +40,7 @@ int mainExample1() {
 
 	F = A + B - B * c + C / b + D * a;
 
-	
+
 	cout << " \n F =   \n" << F;
 	cout << " A  \n" << A;
 	cout << "++ A  \n" << ++A;
@@ -61,28 +61,28 @@ int mainExample1() {
 	/// <returns></returns>
 
 int mainExample2() {
-	ComplexMatrix A(5),  B(5), C(5), D(5), F(5);
+	ComplexMatrix A(5), B(5), C(5), D(5), F(5);
 	ComplexVector a(5), b(5), c(5);
 	ComplexDouble _a(3.2, 5), _b(1, 2), _c = RandComplexDouble();
-	
-		A.RandComplexMatrix();
-		B.RandComplexMatrix();
-		C.RandComplexMatrix();
-		D.RandComplexMatrix();
-		a.RandComplexVector();
-		b.RandComplexVector();
-		c.RandComplexVector();
 
-		cout << endl;
-		cout << "Matrix A \n" << A;
-		cout << "Matrix B \n" << B;
-		cout << "Matrix C \n" << C;
-		cout << "Matrix D \n" << D;
-		cout << endl;
-		cout << "Vector a \n" << a;
-		cout << "Vector b \n" << b;
-		cout << "Vector c \n" << c;
-	
+	A.RandComplexMatrix();
+	B.RandComplexMatrix();
+	C.RandComplexMatrix();
+	D.RandComplexMatrix();
+	a.RandComplexVector();
+	b.RandComplexVector();
+	c.RandComplexVector();
+
+	cout << endl;
+	cout << "Matrix A \n" << A;
+	cout << "Matrix B \n" << B;
+	cout << "Matrix C \n" << C;
+	cout << "Matrix D \n" << D;
+	cout << endl;
+	cout << "Vector a \n" << a;
+	cout << "Vector b \n" << b;
+	cout << "Vector c \n" << c;
+
 	/// Обчислити вираз : F = A+B*_a-B*_c+C/_b; 
 	///                   c = F*a + D*b     
 	F = A + B * _a - B * _c + C / _b;
@@ -90,7 +90,7 @@ int mainExample2() {
 	c = F * a + D * b;
 	cout << "Vector c \n" << c;
 
-	
+
 	return 3;
 }
 int mainExample3() {
